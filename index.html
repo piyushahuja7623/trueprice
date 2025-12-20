@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TruePrice helps you find the best available product prices by redirecting users to trusted online shopping platforms. Compare smart and save time.">
+    <meta name="keywords" content="price comparison, best price, compare prices online, TruePrice, online shopping deals">
+    <meta name="author" content="Piyush Ahuja">
+    <link rel="icon" href="favicon.png">
+    <title>TruePrice - Compare Smart, Save More</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+        }
+
+        /* 🔥 HEADER */
+        header{
+            background-color: #0A1A3A;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            /* display: flex;
+            justify-content: space-between; */
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 0.5rem 1rem; */
+        }
+
+        nav ul{
+            display: flex;
+            /* justify-content: center; */
+            gap: 1.3rem;
+            padding: 1rem 0;
+            color: antiquewhite;
+            margin-right: .3rem;
+        }
+
+        nav ul li{
+            list-style: none;
+            font-size: .8rem;
+            border-radius: .4rem;
+            /* padding: 5px 8px; */
+
+            transition: 0.2s ease;
+        }
+
+        nav ul li:hover{
+            box-shadow: 5px 5px 20px red;
+        }
+
+        /* 🔥 MAIN CONTAINER */
+        .container{
+            width: 100%;
+            background-color: whitesmoke;
+            padding: 1rem;
+        }
+
+        /* 🔥 MOBILE LAYOUT = SIMPLE COLUMN */
+        .row{
+            margin-bottom: 2rem;
+        }
+
+        .row img{
+            width: 80%;
+            max-width: 420px;   /* ✅ big screen control */
+            height: auto;       /* ✅ image cut nahi hogi */
+            display: block;
+            margin: 0 auto;
+            border-radius: 5%;
+            box-shadow: 0 0 20px blueviolet;
+    }
+
+        .itxt{
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .itxt p{
+           margin-bottom: 1rem;
+           font-size: 1.2rem;
+        }
+        .why{
+            text-align: center;
+            font-weight: bold;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-decoration: underline;
+            color:rgb(95, 105, 164);
+        }
+        /* 🔥 FOOTER */
+        footer{
+            width: 100%;
+            height: auto;
+            text-align: center;
+            padding: 1rem 0;
+            background: gray;
+            color: white;
+        }
+
+        footer img{
+            width: 20%;
+            border-radius: 50%;
+            display: block;
+            margin: 0.5rem auto;
+            object-fit: cover;
+
+            /* Soft premium glow */
+            box-shadow: 
+                0 0 20px red,
+                0 0 40px blueviolet;
+        }
+
+        footer p{
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+        .brand img{
+            width:13rem;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+        nav ul li a{
+            color: antiquewhite;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            text-decoration:underline;
+            text-decoration-thickness: 1.4px;
+        }
+        .btnhead{
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: .5rem;
+        }
+        .btn{
+            background: black;
+            color: white;
+            border-radius: 15%;
+            cursor: pointer;
+        }
+        .btn:hover{
+            box-shadow: 0 0 10px blueviolet;
+        }
+        .dark {
+    background-color: black;
+    color: white;
+    }
+
+        .light {
+    background-color: whitesmoke;
+    color: black;
+    }
+    .search-container {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#searchInput {
+    width: 60%;
+    max-width: 25rem;     
+    padding: 0.6rem;      
+    font-size: 1rem;
+    border-radius: 0.4rem; 
+    border: 1px solid #ccc; 
+}
+
+#searchBtn {
+    padding: 0.6rem 1rem;  
+    font-size: 1rem;
+    margin-left: 0.5rem;  
+    border: none;
+    border-radius: 0.4rem;
+    background-color: #0A1A3A;
+    color: white;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #102c68;
+    box-shadow: 0 0 1.5rem blueviolet;
+}
+
+    .search-container p {
+        margin-bottom: 1rem;
+        font-weight: bold;
+        color: #b0b0b0;
+        text-decoration:underline;
+    }
+
+
+
+
+         /* 🔥 LAPTOP LAYOUT (ZIG-ZAG) */
+        @media (min-width: 768px){
+
+            .row{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2rem;
+            }
+
+            .row img{
+                width: 40%;
+                max-width: 420px;
+                height: auto;
+                 box-shadow: 0 0 20px blueviolet;
+
+            }
+
+            .itxt{
+                width: 60%;
+                text-align: left;
+            }
+
+            /* Reverse row = right-left */
+            .reverse{
+                flex-direction: row-reverse;
+            }
+            footer img{
+                width: 5%;
+                height: auto;
+            }
+            .brand img{
+                width: 30rem;
+            }
+            nav ul li{
+            font-size: 1.2rem;
+        }
+        nav ul{
+            margin-right: .8rem;
+            gap: 2rem;
+        }
+        .itxt p{
+            font-size: 1.5rem;
+        }
+        .why{
+            margin: 4rem 0;
+        }
+        .search-container p{
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        }
+
+    </style>
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="brand"><img src="imgweb/true2.png" alt="trueprice"></div>
+            <ul>
+                <li> <a href="index.html">home</a> </li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN BODY -->
+    <main>
+        
+        <div class="container" id="mainBox">
+            <div class="btnhead">
+            <button class="btn" id="bt">Dark Theme</button>
+            <button class="btn" id="reset">White Theme</button>
+        </div>
+
+      <div class="search-container">
+        <p> Search any product here to to find the best availble price from trusted platforms</p>
+        <input type="text" id="searchInput" placeholder="Search product...">
+        <button id="searchBtn">Search</button>
+    </div>
+
+        <p class="why">Why Using TruePrice?</p>
+
+            <!-- ROW 1 — IMAGE LEFT, TEXT RIGHT -->
+            <div class="row">
+                <img src="imgweb/topic1.png" alt="image1">
+                <div class="itxt">
+                    <p><b>1. Find Lowest Price Instantly.</b></p>
+                    TruePrice automatically compares product prices across multiple trusted platforms and instantly shows you where the product is available at the lowest price. You don’t need to search manually or switch between websites — the best deal appears in seconds.
+                </div>
+            </div>
+
+            <!-- ROW 2 — IMAGE RIGHT, TEXT LEFT -->
+            <div class="row reverse">
+                <img src="imgweb/topic2.jpg" alt="image2">
+                <div class="itxt">
+                    <p><b>2. Don't Need to Visit Multiple Platforms, Save Time.</b></p>
+                    Instead of wasting time opening different shopping apps and websites, TruePrice brings all prices together on a single screen. This helps you make faster decisions and focus only on the best value option without unnecessary effort.
+                </div>
+            </div>
+
+            <!-- ROW 3 — IMAGE LEFT, TEXT RIGHT -->
+            <div class="row">
+                <img src="imgweb/topic3.png" alt="image3">
+                <div class="itxt">
+                    <p><b>3. User Friendly Interface.</b></p>
+                    Product prices keep changing frequently, and TruePrice tracks those changes in real time. You always see the latest prices available online, helping you avoid outdated information and ensuring you never miss a better deal.
+                </div>
+            </div>
+
+            <div class="row reverse">
+                <img src="imgweb/topic4.png" alt="image4">
+                <div class="itxt">
+                     <p><b>4. Fast and Lightweight Website.</b></p>
+                    TruePrice doesn’t just show prices — it helps you understand them. With clear comparisons and visual insights, you can quickly identify which platform offers better value and make smarter buying decisions with confidence.
+
+                </div>
+            </div>
+            <div class="row">
+                <img src="imgweb/topic5.png" alt="image5">
+                <div class="itxt">
+                    <p><b>5. Save More While Shopping.</b></p>
+                    TruePrice is designed to load quickly and run smoothly on all devices. Whether you’re using a mobile phone or a large desktop screen, the website stays responsive, fast, and easy to use without unnecessary delays.
+                </div>
+            </div>
+
+            <div class="row reverse">
+                <img src="imgweb/topic6.png" alt="image6">
+                <div class="itxt">
+                    <p><b>6. Real Time Price Updates.</b></p>
+                    Every highlighted lowest price is carefully verified to ensure accuracy and reliability. TruePrice helps you avoid misleading deals by showing only genuine and trusted price information from reliable platforms.
+                </div>
+            </div>
+            <div class="row">
+                <img src="imgweb/topic7.png" alt="image7">
+                <div class="itxt">
+                    <p><b>7. Smart Price Insights.</b></p>
+                    TruePrice focuses on accuracy and trust. All price comparisons are verified before being displayed, so you can rely on the results and shop confidently without worrying about incorrect or misleading pricing.
+                </div>
+            </div>
+            <div class="row reverse">
+                <img src="imgweb/topic8.png" alt="image8">
+                <div class="itxt">
+                    <p><b>8. Accurate Price Matching.</b></p>
+                    With TruePrice, you can compare prices from multiple online stores at the same time. This gives you a complete market view and helps you choose the store that offers the best deal for your purchase.
+                </div>
+            </div>
+            <div class="row">
+                <img src="imgweb/topic9.png" alt="image9">
+                <div class="itxt">
+                    <p><b>9. One Search for All Stores.</b></p>
+                   TruePrice automatically scans available prices and selects the lowest one for you. This removes guesswork and manual comparison, allowing you to make confident purchasing decisions with minimal effort.
+                </div>
+            </div>
+            <div class="row reverse">
+                <img src="imgweb/topic10.png" alt="image10">
+                <div class="itxt">
+                    <p><b>10. Trusted & Verified Results.</b></p>
+                    Built with security and transparency in mind, TruePrice ensures a safe browsing experience while delivering reliable price comparisons. Your trust matters, and every feature is designed to support smarter and safer shopping.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <img src="imgweb/piyush.jpg" alt="Owner">
+        <p>Author & Developer: <strong>Piyush Ahuja</strong></p>
+        <p>© 2025 TruePrice. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
