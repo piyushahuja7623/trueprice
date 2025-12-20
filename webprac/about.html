@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | TruePrice</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== THEMES (IMPORTANT FIX) ===== */
+body.dark{
+    background-color:#000;
+    color:#fff;
+}
+
+body.light{
+    background-color:whitesmoke;
+    color:#000;
+}
+
+/* ===== HEADER (SAME AS INDEX) ===== */
+header{
+    background-color:#0A1A3A;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand img{
+    width:13rem;
+}
+
+nav ul{
+    display:flex;
+    gap:1.3rem;
+    padding:1rem 0;
+    margin-right:.3rem;
+}
+
+nav ul li{
+    list-style:none;
+    font-size:.8rem;
+}
+
+nav ul li a{
+    color:antiquewhite;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+    box-shadow: 5px 5px 20px red;
+}
+/* ===== ABOUT CARD ===== */
+.about-box{
+    max-width:900px;
+    margin:3rem auto;
+    padding:2rem;
+    border-radius:.7rem;
+    line-height:1.7;
+    background:#111;
+}
+
+.about-box p{
+    margin-top: 1.5rem;
+}
+.future-note{
+    color:#6f7cff;
+    font-weight:500;
+}
+
+
+/* light mode card */
+body.light .about-box{
+    background:#fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width:768px){
+    .brand img{ width:30rem; }
+    nav ul{ gap:2rem; margin-right:.8rem; }
+    nav ul li{ font-size:1.2rem; }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+    const theme = localStorage.getItem("theme") || "light";
+    document.body.classList.add(theme);
+});
+</script>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="brand">
+        <img src="imgweb/true2.png" alt="trueprice">
+    </div>
+    <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+<div class="about-box">
+    <h2>About TruePrice</h2>
+
+    <p>TruePrice is a price comparison platform designed to help users find the best available deals across trusted online shopping platforms.</p>
+
+    <p>Instead of manually searching on multiple websites, TruePrice simplifies the process by redirecting users to relevant product listings, saving both time and effort.</p>
+
+    <p>Transparency and trust are our priorities. Some links on this website may be affiliate links, which means we may earn a small commission if a purchase is made — at no extra cost to the user.</p>
+
+    <p> TruePrice does not sell products directly. We only provide verified redirections to partner platforms to help users make informed shopping decisions.</p>
+
+    <p class="future-note">TruePrice is built with the goal of helping users <u><b>compare prices across platforms</b></u>. At present, the platform redirects users to trusted partner websites while we continue refining advanced comparison features.</p>
+
+    <p class="future-note">TruePrice is independently conceptualized, designed, and developed by <u><b>Piyush Ahuja </b></u>with a focus on building a transparent and user-friendly price comparison platform.</p>
+
+</div>
+</main>
+
+</body>
+</html>
