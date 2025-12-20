@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="View best available prices for your searched product from trusted online platforms via TruePrice.">
+    <meta name="author" content="Piyush Ahuja">
+    <link rel="icon" href="favicon.png">
+    <title>TruePrice Results - Best Available Price</title>
+
+    <!-- ✅ SAME CSS (navbar + responsive) -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, sans-serif;
+            background: whitesmoke;
+        }
+
+        /* 🔥 HEADER (SAME AS INDEX) */
+        header{
+            background-color: #0A1A3A;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand img{
+            width:13rem;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        nav ul{
+            display: flex;
+            gap: 1.3rem;
+            padding: 1rem 0;
+            margin-right: .3rem;
+        }
+
+        nav ul li{
+            list-style: none;
+            font-size: .8rem;
+            border-radius: .4rem;
+            transition: 0.2s ease;
+        }
+
+        nav ul li a{
+            color: antiquewhite;
+            text-decoration: none;
+        }
+
+        nav ul li:hover{
+            box-shadow: 5px 5px 20px red;
+        }
+
+        nav ul li a:hover{
+            text-decoration: underline;
+        }
+
+        /* 🔥 RESULT CONTAINER */
+        .result-container{
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .result-container h2{
+            margin-bottom: 2rem;
+            color: #0A1A3A;
+            /* margin-top:1rem; */
+        }
+
+        .card{
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 0.7rem;
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+             /* max-width: 500px;
+            margin: 1.5rem auto; */
+        }
+
+        .card h3{
+            margin-bottom: 0.5rem;
+            color:#0A1A3A;
+        }
+
+        .price{
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-buy{
+            padding: 0.6rem 1.2rem;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+
+        .btn-buy:hover{
+            box-shadow: 0 0 15px blueviolet;
+        }
+        .tick img{
+            align-content: center;
+            width: 10rem;
+            height: auto;
+        }
+
+        /* 🔥 DARK THEME FOR RESULT PAGE */
+.result-dark{
+    background-color: #0e0e0e;
+    color: white;
+}
+
+.result-dark .card{
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.result-dark .price,
+.result-dark h3,
+.result-dark h2{
+    color: white;
+}
+
+.result-dark .btn-buy{
+    background-color: #6a5acd;
+    color: white;
+}
+body.dark-bg{
+    background-color: #0e0e0e;
+}
+/* 🔥 Result page footer */
+.result-footer{
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    background: transparent;
+}
+
+/* Light theme */
+.affiliate-note{
+    color: #555;
+}
+
+/* Dark theme auto sync */
+.result-dark .affiliate-note{
+    color: #ccc;
+}
+
+        /* 🔥 MEDIA QUERY (SAME FEEL AS INDEX) */
+        @media (min-width: 768px){
+            nav ul li{
+                font-size: 1.2rem;
+            }
+            nav ul{
+                gap: 2rem;
+                margin-right: .8rem;
+            }
+            .brand img{
+                width: 30rem;
+            }
+            .result-container h2{
+                margin-top:1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🔥 HEADER -->
+<header>
+    <nav>
+        <div class="brand">
+            <img src="imgweb/true2.png" alt="trueprice">
+        </div>
+        <ul>
+            <li><a href="index.html">home</a></li>
+            <li>about</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+</header>
+
+<!-- 🔥 RESULT BODY -->
+<main class="result-container" id="resultBox">
+    <h2 id="searchTitle">Showing results</h2>
+
+    <!-- AMAZON -->
+    <div class="card">
+        <h3>Amazon</h3>
+        <p class="price">Best available price</p>
+        <button class="btn-buy" onclick="goAmazon()">Check on Amazon</button>
+    </div>
+
+    <!-- FLIPKART -->
+    <div class="card">
+        <h3>Flipkart</h3>
+        <p class="price">Best available price</p>
+        <button class="btn-buy" onclick="goFlipkart()">Check on Flipkart</button>
+    </div>
+    <div class="tick"><img src="imgweb/tick2.png" alt="tick"></div>
+</main>
+<footer class="result-footer">
+  <p class="affiliate-note">
+    TruePrice may earn a small commission from affiliate links, at no extra cost to you.
+  </p>
+</footer>
+
+
+<script>
+    // 🔹 SEARCH VALUE SHOW
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("search") || "";
+
+    if(product){
+        document.getElementById("searchTitle").innerText =
+        `Showing results for "${product}"`;
+    }
+
+    // 🔹 AMAZON SEARCH-BASED AFFILIATE REDIRECT
+    function goAmazon(){
+        const query = product.replaceAll(" ", "+");
+
+        // 👇 SIRF YE TAG BAAD ME CHANGE KAREGA
+        const AMAZON_TAG = "YOURTAG-21";
+
+        const url = `https://www.amazon.in/s?k=${query}&tag=${AMAZON_TAG}`;
+        window.open(url, "_blank");
+    }
+
+    // 🔹 FLIPKART SEARCH-BASED AFFILIATE REDIRECT
+    function goFlipkart(){
+        const query = product.replaceAll(" ", "+");
+
+        // 👇 SIRF YE ID BAAD ME CHANGE KAREGA
+        const FLIPKART_ID = "YOURAFFID";
+
+        const url = `https://www.flipkart.com/search?q=${query}&affid=${FLIPKART_ID}`;
+        window.open(url, "_blank");
+    }
+</script>
+
+
+<script>
+    // 🔥 APPLY THEME FROM INDEX PAGE
+    const savedTheme = localStorage.getItem("theme");
+    const resultBox = document.getElementById("resultBox");
+
+    if(savedTheme === "dark"){
+        resultBox.classList.add("result-dark");
+         document.body.classList.add("dark-bg");
+    }
+</script>
+
+
+</body>
+</html>
