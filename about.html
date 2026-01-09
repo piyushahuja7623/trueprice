@@ -32,44 +32,60 @@ body.light{
 }
 
 /* ===== HEADER (SAME AS INDEX) ===== */
-header{
-    background-color:#0A1A3A;
-    position:sticky;
-    top:0;
-    z-index:10;
-}
+/* 🔥 HEADER */
+        header{
+            background-color: #0A1A3A;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            /* display: flex;
+            justify-content: space-between; */
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 0.5rem 1rem; */
+        }
 
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+        nav ul{
+            display: flex;
+            /* justify-content: center; */
+            gap: 1.3rem;
+            padding: 1rem 0;
+            color: antiquewhite;
+            margin-right: .3rem;
+        }
 
-.brand img{
-    width:13rem;
-}
+        nav ul li{
+            list-style: none;
+            font-size: .8rem;
+            border-radius: .4rem;
+            /* padding: 5px 8px; */
 
-nav ul{
-    display:flex;
-    gap:1.3rem;
-    padding:1rem 0;
-    margin-right:.3rem;
-}
+            transition: 0.2s ease;
+        }
 
-nav ul li{
-    list-style:none;
-    font-size:.8rem;
-}
+        nav ul li:hover{
+            box-shadow: 5px 5px 20px red;
+        }
 
-nav ul li a{
-    color:antiquewhite;
-    text-decoration:none;
-}
-
-nav ul li a:hover{
-    text-decoration:underline;
-    box-shadow: 5px 5px 20px red;
-}
+        .brand img{
+            width:13rem;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+        nav ul li a{
+            color: antiquewhite;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            text-decoration:underline;
+            text-decoration-thickness: 1.4px;
+        }
 /* ===== ABOUT CARD ===== */
 .about-box{
     max-width:900px;
@@ -96,9 +112,11 @@ body.light .about-box{
 
 /* ===== RESPONSIVE ===== */
 @media (min-width:768px){
-    .brand img{ width:30rem; }
-    nav ul{ gap:2rem; margin-right:.8rem; }
-    nav ul li{ font-size:1.2rem; }
+     .brand img{width: 30rem;}
+    nav ul li{font-size: 1.2rem;}
+    nav ul{
+    margin-right: .8rem;
+    gap: 2rem;
 }
 </style>
 
@@ -145,4 +163,5 @@ document.addEventListener("DOMContentLoaded",()=>{
 </main>
 
 </body>
+
 </html>
