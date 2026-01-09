@@ -175,6 +175,82 @@ body.dark-bg{
     color: #ccc;
 }
 
+/* 🔹 WHY REDIRECT BOX */
+.why-redirect{
+    background: #f5f7fa;
+    border-left: 4px solid #0A1A3A;
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.8rem;
+    border-radius: 0.4rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.why-redirect strong{
+    display: block;
+    margin-bottom: 0.3rem;
+    color: #0A1A3A;
+}
+
+/* dark theme */
+.result-dark .why-redirect{
+    background: #1f1f1f;
+    border-left-color: #6a5acd;
+    color: #ddd;
+}
+
+.result-dark .why-redirect strong{
+    color: #bdb7ff;
+}
+
+.future-note{
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    color: #6f6f6f;
+}
+
+.result-dark .future-note{
+    color: #aaa;
+}
+
+        /* 📱 Mobile: future note collapse + expand */
+@media (max-width: 480px){
+
+    .future-wrapper{
+        text-align: left;
+        cursor: pointer;
+        margin-top: 0.4rem;
+    }
+
+    .future-wrapper .future-note{
+        font-size: 0.72rem;
+        line-height: 1.2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+    .future-wrapper.expanded .future-note{
+        -webkit-line-clamp: unset;
+    }
+
+    .more{
+        display: inline;
+        color: #6a5acd;
+        font-weight: bold;
+        font-size: 0.72rem;
+        margin-left: 4px;
+        white-space: nowrap;
+    }
+
+    .future-wrapper.expanded .more{
+        display: none;
+    }
+}
+
+
         /* 🔥 MEDIA QUERY (SAME FEEL AS INDEX) */
         @media (min-width: 768px){
             nav ul li{
@@ -189,6 +265,9 @@ body.dark-bg{
             }
             .result-container h2{
                 margin-top:1rem;
+            }
+             .more{
+                display: none;
             }
         }
     </style>
@@ -213,6 +292,18 @@ body.dark-bg{
 <!-- 🔥 RESULT BODY -->
 <main class="result-container" id="resultBox">
     <h2 id="searchTitle">Showing results</h2>
+
+     <div class="why-redirect">
+    <strong>ℹ️ Why you’re being redirected</strong>
+    <p>TruePrice helps you reach verified platforms faster.We don’t sell products — we guide you to trusted sellers so you can buy safely.</p>
+     <div class="future-wrapper expandable">
+  <p class="future-note">
+    TruePrice is built to enable complete price comparison. Redirects are used today while advanced comparison systems are prepared with user support.
+  </p>
+  <span class="more">more ▾</span>
+</div>
+</div>
+
 
     <!-- AMAZON -->
     <div class="card">
@@ -281,9 +372,19 @@ body.dark-bg{
     }
 </script>
 
+<script>
+document.addEventListener("click", function(e){
+    const wrapper = e.target.closest(".future-wrapper");
+    if(wrapper){
+        wrapper.classList.toggle("expanded");
+    }
+});
+</script>
+
 
 </body>
 </html>
+
 
 
 
