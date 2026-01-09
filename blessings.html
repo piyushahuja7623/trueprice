@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta -->
+    <title>Blessings | TruePrice</title>
+
+    <meta name="description"
+          content="A humble tribute to the divine blessings that made the creation of TruePrice possible. With gratitude and faith.">
+
+    <meta name="keywords"
+          content="Blessings, Gratitude, Faith, Divine Blessings, TruePrice">
+
+    <meta name="author" content="Piyush Ahuja">
+
+    <!-- Optional but good -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png">
+
+    <!--  🔥 NAVBAR ONLY (copied from index.html) -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+ body{
+            font-family: Arial, sans-serif;
+        }
+
+        /* 🔥 HEADER */
+        header{
+            background-color: #0A1A3A;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            /* display: flex;
+            justify-content: space-between; */
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* padding: 0.5rem 1rem; */
+        }
+
+        nav ul{
+            display: flex;
+            /* justify-content: center; */
+            gap: 1.3rem;
+            padding: 1rem 0;
+            color: antiquewhite;
+            margin-right: .3rem;
+        }
+
+        nav ul li{
+            list-style: none;
+            font-size: .8rem;
+            border-radius: .4rem;
+            /* padding: 5px 8px; */
+
+            transition: 0.2s ease;
+        }
+
+        nav ul li:hover{
+            box-shadow: 5px 5px 20px red;
+        }
+
+        .brand img{
+            width:13rem;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+        nav ul li a{
+            color: antiquewhite;
+            text-decoration: none;
+        }
+        nav ul li a:hover{
+            text-decoration:underline;
+            text-decoration-thickness: 1.4px;
+        }
+
+
+        /* 🌸 Blessings Page Layout */
+.blessings-container{
+    padding: 2rem 1rem;
+    background: whitesmoke;
+    text-align: center;
+    min-height: 100vh;  /*this*/
+}
+
+/* opening line */
+.blessings-intro{
+    font-size: .8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: rgb(95, 105, 164);
+}
+
+/* card */
+.blessings-card{
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 1.8rem 1.2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 0 25px rgba(0,0,0,0.15);
+}
+
+/* text inside card */
+.blessings-card p{
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+}
+
+
+/* 🌙 Dark theme support for Blessings page */
+.dark .blessings-container{
+    background-color: #0e0e0e;
+}
+
+.dark .blessings-card{
+    background-color: #2b2b2b;
+    color: white;
+}
+
+.dark .blessings-intro{
+    color: #bdb7ff;
+}
+
+/* ☀️ Light theme (default already fine, but clarity ke liye) */
+.light .blessings-container{
+    background-color: whitesmoke;
+}
+
+.light .blessings-card{
+    background-color: white;
+    color: black;
+}
+
+
+
+/* 🔥 Laptop navbar sizing */
+@media (min-width: 768px){
+    .brand img{
+                width: 30rem;
+            }
+            nav ul li{
+            font-size: 1.2rem;
+        }
+        nav ul{
+            margin-right: .8rem;
+            gap: 2rem;
+        }
+         .blessings-intro{
+        font-size: 1.3rem;
+    }
+    .blessings-card p{
+        font-size: 1.2rem;
+    }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+    const theme = localStorage.getItem("theme") || "light";
+    document.body.classList.add(theme);
+});
+</script>
+
+
+</head>
+<body>
+    
+ <header>
+        <nav>
+            <div class="brand"><img src="imgweb/true2.png" alt="trueprice"></div>
+            <ul>
+                <li> <a href="index.html">home</a> </li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blessings-container" id="mainBox">
+
+    <!-- 🌸 Opening line -->
+    <p class="blessings-intro">
+        TruePrice could not have been created without the blessings of those I deeply believe in.
+    </p>
+
+    <!-- 🌼 Blessings Card -->
+    <div class="blessings-card">
+
+        <p> 🙏ॐ श्री गणेशाय नमः🙏</p>
+        <p>🙏ॐ नमः शिवाय</p>
+       <p>🙏 जय हनुमान दादा – जय बजरंगबली</p>
+
+        <p>🙏 सियावर रामचंद्र की जय – जय श्री राम</p>
+        <p>🙏ॐ नमो नारायणाय</p>
+
+        <p>🙏 जय गणपति बप्पा जय विघ्नहर्ता – शुभ लाभ</p>
+
+        <p>🙏 जय श्री राधा कृष्ण - राधे राधे   
+        <br>🙏हरे कृष्ण हरे कृष्ण कृष्ण कृष्ण हरे हरे  
+        <br>हरे राम हरे राम राम राम हरे हरे</p>
+
+        <p>🙏 कृष्ण सदा सहायते</p>
+
+        <p>🙏 जय  मामादादा – जय मामादेव</p>
+
+        <p>🙏 हर हर महादेव, हर हर शंभू  
+        <br>ॐ नमः शिवाय, ॐ नमः शिवाय</p>
+
+        <p>🙏 जय लक्ष्मी माता</p>
+        <p>🙏 जय सरस्वती माता</p>
+
+        <p>🙏 वाहेगुरु जी का खालसा, वाहेगुरु जी की फ़तेह  
+        <br>धन गुरु नानक, धन गुरु नानक</p>
+
+        <p>🙏 जय आद्यशक्ति माँ अम्बे</p>
+
+    </div>
+</main>
+</body>
+</html>
