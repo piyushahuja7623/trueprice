@@ -157,15 +157,22 @@
             gap: 1rem;
             margin-bottom: .5rem;
         }
-        .btn{
-            background: black;
+       .btn{
+            background: rgb(95, 105, 164);;
             color: white;
-            border-radius: 15%;
+            border-radius: 999px;          /* 🔥 fully rounded */
+            padding: 0.45rem 1.1rem;       /* button feel */
             cursor: pointer;
-        }
-        .btn:hover{
-            box-shadow: 0 0 10px blueviolet;
-        }
+            border: none;
+            font-size: 0.85rem;
+            transition: 0.2s ease;
+}
+
+    .btn:hover{
+            background: white;
+            color: black;
+            box-shadow: 0 0 15px blueviolet;
+    }
         .dark {
     background-color: black;
     color: white;
@@ -212,6 +219,31 @@
         text-decoration:underline;
     }
 
+    /* 🌸 Blessings floating button (footer ke upar, right side) */
+.blessings-btn{
+    position: fixed;
+    right: 1rem;
+    bottom: .8rem; /* footer ke just upar */
+    z-index: 20;
+}
+
+.blessings-btn a{
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    background: rgb(95, 105, 164);
+    color: white;
+    border-radius: 999px; /* fully rounded */
+    font-size: 0.9rem;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: 0.2s ease;
+}
+
+.blessings-btn a:hover{
+    background: white;
+    color: black;
+    box-shadow: 0 0 20px blueviolet;
+}
 
 
 
@@ -297,7 +329,7 @@
 
       <div class="search-container">
         <p> Search any product here to to find the best availble price from trusted platforms</p>
-        <input type="text" id="searchInput" placeholder="Search product...">
+        <input type="text" id="searchInput" placeholder="🔍Search product...">
         <button id="searchBtn">Search</button>
     </div>
 
@@ -387,6 +419,10 @@ Advanced price-matching logic is part of future development plans which needs us
         </div>
     </main>
 
+    <div class="blessings-btn">
+  <a href="blessings.html">Blessings</a>
+</div>
+
     <!-- FOOTER -->
     <footer>
         <img src="imgweb/owner.png" alt="Owner">
@@ -396,6 +432,7 @@ Advanced price-matching logic is part of future development plans which needs us
 
 </body>
 </html>
+
 
 
 
