@@ -246,6 +246,71 @@
 }
 
 
+/* 💬 Vertical Feedback Tab */
+/* 💬 Premium Vertical Feedback Tab */
+.feedback-btn{
+    position: fixed;
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    z-index: 50;
+}
+
+.feedback-btn a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.7rem 0.45rem;   /* 🔥 slimmer */
+    background: rgb(95, 105, 164);
+    color: white;
+
+    font-size: 0.75rem;       /* 🔥 clean text size */
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    border-radius: 0px 10px 10px 0px;  /* 🔥 smooth tab */
+    box-shadow: -3px 0 10px rgba(0,0,0,0.3);
+    transition: all 0.25s ease;
+}
+
+.feedback-btn a:hover{
+    background: white;
+    color: black;
+    box-shadow: -4px 0 18px blueviolet;
+}
+
+/* 🚀 Slide-in animation */
+.feedback-btn{
+    opacity: 0;
+    transform: translate(40px, -50%);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* visible state */
+.feedback-btn.show{
+    opacity: 1;
+    transform: translate(0, -50%);
+}
+
+/* auto-hide on scroll */
+.feedback-btn.hide{
+    transform: translate(80px, -50%);
+    opacity: 0;
+}
+
+/* 📱 Mobile polish */
+@media (max-width: 600px){
+    .feedback-btn a{
+        font-size: 0.7rem;
+        padding: 0.6rem 0.35rem;
+        letter-spacing: 0.5px;
+    }
+}
 
          /* 🔥 LAPTOP LAYOUT (ZIG-ZAG) */
         @media (min-width: 768px){
@@ -430,6 +495,10 @@ Advanced price-matching logic is part of future development plans which needs us
         <p>© 2025-2026 TruePrice. All Rights Reserved.</p>
     </footer>
 
+     <div class="feedback-btn">
+    <a href="feedback.html">Feedback</a>
+</div>
+
     <!-- CUELINKS FLIPKART. -->
     <script type='text/javascript'>
       var cId = '259399';
@@ -442,9 +511,30 @@ Advanced price-matching logic is part of future development plans which needs us
         document.getElementsByTagName('body')[0].appendChild(s);
       }());
 </script>
+<script>
+  const feedbackBtn = document.querySelector('.feedback-btn');
+  let lastScrollY = window.scrollY;
+
+  // show after page load
+  window.addEventListener('load', () => {
+    feedbackBtn.classList.add('show');
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+      // scrolling down → hide
+      feedbackBtn.classList.add('hide');
+    } else {
+      // scrolling up → show
+      feedbackBtn.classList.remove('hide');
+    }
+    lastScrollY = window.scrollY;
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
