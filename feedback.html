@@ -124,9 +124,52 @@
       font-size: 0.85rem;
       opacity: 0.7;
     }
+    /* 🔝 Top nav wrapper (center fix) */
+.nav-wrapper{
+  position: absolute;
+  top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* ✨ Premium nav */
+.feedback-nav{
+  display: flex;
+  gap: 2.2rem;
+}
+
+/* 🔗 Links */
+.feedback-nav a{
+  color: #9fa8ff;           /* premium soft violet */
+  text-decoration: none;   /* ❌ no underline */
+  font-size: 0.95rem;
+  font-weight: 500;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+/* Hover = clean highlight */
+.feedback-nav a:hover{
+  opacity: 1;
+  color: #c7ccff;           /* lighter premium hover */
+}
+
+
   </style>
 </head>
 <body>
+
+  <div class="nav-wrapper">
+  <nav class="feedback-nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
+
 
   <div class="card">
     <h1>Share Your Feedback</h1>
