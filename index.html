@@ -303,6 +303,82 @@
     opacity: 0;
 }
 
+/* ⭐ USER FEEDBACK STATS */
+.user-stats{
+    margin: 3rem auto;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    text-align: center;
+}
+
+.user-stats h3{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: rgb(95, 105, 164); /* TruePrice theme */
+}
+
+/* Grid */
+.stats-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Boxes */
+.stat-box{
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.8rem 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    transition: 0.25s ease;
+}
+
+.stat-box:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px blueviolet;
+}
+
+.stat-value{
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(95, 105, 164);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-box p{
+    font-size: 1rem;
+    color: #333;
+}
+
+.stat-note{
+    display: block;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* 🌙 DARK MODE SUPPORT */
+.dark .user-stats h3{
+    color: #bdb7ff;
+}
+
+.dark .stat-box{
+    background: #1f1f1f;
+}
+
+.dark .stat-box p{
+    color: #ddd;
+}
+
+.dark .stat-value{
+    color: #bdb7ff;
+}
+
+.dark .stat-note{
+    color: #aaa;
+}
+
 /* 📱 Mobile polish */
 @media (max-width: 600px){
     .feedback-btn a{
@@ -363,6 +439,15 @@
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
         }
+        /* for feedback */
+         .stats-grid{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .stat-box{
+        width: 45%;
+    }
         }
 
     </style>
@@ -397,6 +482,25 @@
         <input type="text" id="searchInput" placeholder="🔍Search product...">
         <button id="searchBtn">Search</button>
     </div>
+
+        <!-- section for feedback -->
+    <section class="user-stats">
+  <h3>What users say about TruePrice</h3>
+
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span class="stat-value" data-target="99">99%</span>
+      <p>Users found TruePrice helpful</p>
+    </div>
+
+    <div class="stat-box">
+      <span class="stat-value" data-target="98">98%</span>
+      <p>Users prefer TruePrice over other platforms</p>
+    </div>
+  </div>
+
+  <small class="stat-note">Based on early user feedback</small>
+</section>
 
         <p class="why">Why Using TruePrice?</p>
 
@@ -532,8 +636,34 @@ Advanced price-matching logic is part of future development plans which needs us
   });
 </script>
 
+<!-- feedback animation js. -->
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".stat-value");
+
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    let current = 0;
+    const speed = 20; // lower = faster
+
+    const updateCounter = () => {
+      if (current < target) {
+        current++;
+        counter.textContent = current + "%";
+        setTimeout(updateCounter, speed);
+      } else {
+        counter.textContent = target + "%";
+      }
+    };
+
+    updateCounter();
+  });
+});
+</script>
+    
 </body>
 </html>
+
 
 
 
