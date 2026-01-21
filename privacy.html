@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<meta name="description" content="Privacy Policy of TruePrice. Learn how we handle user privacy, data usage, and affiliate links transparently.">
+<meta name="author" content="Piyush Ahuja">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A1A3A">
+<link rel="canonical" href="https://trueprice.site/privacy.html">
+<link rel="icon" href="favicon.png">
+
+<title>Privacy Policy | TruePrice</title>
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23NHWZS59D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23NHWZS59D');
+</script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== THEMES ===== */
+body.dark{
+    background-color:#000;
+    color:#fff;
+}
+
+body.light{
+    background-color:whitesmoke;
+    color:#000;
+}
+
+/* ===== HEADER (SAME AS SITE) ===== */
+header{
+    background-color: #0A1A3A;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand img{
+    width:13rem;
+    height:auto;
+    object-fit:contain;
+}
+
+nav ul{
+    display:flex;
+    gap:1.3rem;
+    padding:1rem 0;
+    margin-right:.3rem;
+}
+
+nav ul li{
+    list-style:none;
+    font-size:.8rem;
+}
+
+nav ul li a{
+    color:antiquewhite;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+    box-shadow: 5px 5px 20px red;
+}
+
+/* ===== PRIVACY CONTENT ===== */
+.privacy-box{
+    max-width:900px;
+    margin:3rem auto;
+    padding:2rem 1.5rem;
+    border-radius:.8rem;
+    line-height:1.7;
+    background:#111;
+}
+
+body.light .privacy-box{
+    background:#fff;
+}
+
+.privacy-box h2{
+    margin-bottom:1.5rem;
+    color:#6f7cff;
+}
+
+.privacy-box h3{
+    margin-top:2rem;
+    margin-bottom:.6rem;
+    font-size:1.05rem;
+    color:#bdb7ff;
+}
+
+/* white theme h3 fix */
+body.light .privacy-box h3{
+    color:#5F69A4; /* same as index.html heading */
+}
+
+
+.privacy-box p{
+    margin-bottom:1rem;
+    font-size:0.95rem;
+}
+
+.privacy-box ul{
+    margin-left:1.2rem;
+    margin-bottom:1rem;
+}
+
+.privacy-box ul li{
+    margin-bottom:.4rem;
+    font-size:0.95rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width:768px){
+    .brand img{width:30rem;}
+    nav ul{gap:2rem;margin-right:.8rem;}
+    nav ul li{font-size:1.2rem;}
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+    const theme = localStorage.getItem("theme") || "light";
+    document.body.classList.add(theme);
+});
+</script>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="brand">
+        <img src="imgweb/true2.png" alt="trueprice">
+    </div>
+    <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="contact.html">contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+<div class="privacy-box">
+
+<h2>Privacy Policy</h2>
+
+<p>
+At TruePrice, your privacy is respected. This website is designed to provide a simple and transparent price comparison experience without collecting personal user information.
+</p>
+
+<h3>Information We Do Not Collect</h3>
+<ul>
+    <li>No user accounts or registrations</li>
+    <li>No names, phone numbers, or email addresses</li>
+    <li>No payment or transaction details</li>
+</ul>
+
+<h3>Automatic Information</h3>
+<p>
+Like most websites, basic technical information such as browser type, device type, or IP address may be processed automatically by hosting services or analytics tools for performance and security purposes. This data is not used to identify individual users.
+</p>
+
+<h3>Affiliate Links</h3>
+<p>
+TruePrice contains affiliate links to third-party shopping platforms. When you click these links, you are redirected to external websites that operate under their own privacy policies. TruePrice does not control or store data from these platforms.
+</p>
+
+<h3>Cookies</h3>
+<p>
+TruePrice does not intentionally use cookies to track users. Any cookies used are controlled by third-party services such as analytics or affiliate platforms.
+</p>
+
+<h3>Third-Party Websites</h3>
+<p>
+We are not responsible for the privacy practices of external websites linked from TruePrice. Users are encouraged to review the privacy policies of third-party platforms before making any purchase.
+</p>
+
+<h3>Policy Updates</h3>
+<p>
+This Privacy Policy may be updated occasionally to reflect changes in website functionality or legal requirements. Any updates will be posted on this page.
+</p>
+
+<h3>Contact</h3>
+<p>
+If you have questions regarding this Privacy Policy, you may contact us via the Contact page available on this website.
+</p>
+
+</div>
+</main>
+
+</body>
+</html>
