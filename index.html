@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="TruePrice helps you find the best available product prices by redirecting users to trusted online shopping platforms. Compare smart and save time.">
-    <meta name="keywords" content="price comparison, best price, compare prices online, TruePrice, online shopping deals">
     <meta name="author" content="Piyush Ahuja">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0A1A3A">
+    <meta property="og:title" content="TruePrice – Compare Smart, Save More">
+    <meta property="og:description" content="Price comparison platform to find the best available prices online. Compare products, save time, and shop smarter with TruePrice.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trueprice.site/">
+    <meta name="subject" content="Online Price Comparison Platform">
+
     <link rel="icon" href="favicon.png">
+    <link rel="canonical" href="https://trueprice.site/">
     <title>TruePrice - Compare Smart, Save More</title>
 
    <!-- Google tag (gtag.js) -->
@@ -379,6 +387,24 @@
     color: #aaa;
 }
 
+/* added now for footer links */
+.footer-links{
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+}
+
+.footer-links a{
+    color: #e0e0e0;      /* soft white like footer text */
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+.footer-links a:hover{
+    /* text-decoration: underline; */
+    color: white;
+    text-shadow: 0 0 6px blueviolet;
+}
+
 /* 📱 Mobile polish */
 @media (max-width: 600px){
     .feedback-btn a{
@@ -597,6 +623,11 @@ Advanced price-matching logic is part of future development plans which needs us
         <img src="imgweb/owner.png" alt="Owner">
         <p>Author & Developer: <strong>Piyush Ahuja</strong></p>
         <p>© 2025-2026 TruePrice. All Rights Reserved.</p>
+        
+        <p class="footer-links">
+  <a href="privacy.html">Privacy Policy</a> |
+  <a href="disclaimer.html">Disclaimer</a>
+</p>
     </footer>
 
      <div class="feedback-btn">
@@ -663,6 +694,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
 </body>
 </html>
+
 
 
 
