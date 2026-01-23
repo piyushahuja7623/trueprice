@@ -213,6 +213,37 @@ body.dark-bg{
 .result-dark .future-note{
     color: #aaa;
 }
+/* footer links css */
+.footer-links{
+    margin-top: 0.3rem;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* default (light theme) */
+.footer-links a{
+    color: #666;
+    text-decoration: none;
+    margin: 0 0.3rem;
+   transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.footer-links a:hover{
+    color: #333;
+    text-shadow: 0 0 4px rgba(0,0,0,0.25);
+}
+
+/* dark theme */
+.result-dark ~ footer .footer-links a,
+body.dark-bg .footer-links a{
+    color: #aaa;
+}
+
+.result-dark ~ footer .footer-links a:hover,
+body.dark-bg .footer-links a:hover{
+    color: #bdb7ff;
+    text-shadow: 0 0 6px rgba(189,183,255,0.6);
+}
 
         /* 📱 Mobile: future note collapse + expand */
 @media (max-width: 480px){
@@ -324,8 +355,12 @@ body.dark-bg{
   <p class="affiliate-note">
     TruePrice may earn a small commission from affiliate links, at no extra cost to you.
   </p>
+    </p>
+   <p class="footer-links">
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="disclaimer.html">Disclaimer</a>
+  </p>
 </footer>
-
 
 <script>
     // 🔹 SEARCH VALUE SHOW
@@ -393,5 +428,6 @@ document.addEventListener("click", function(e){
 
 </body>
 </html>
+
 
 
