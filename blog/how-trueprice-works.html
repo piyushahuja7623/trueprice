@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>How TruePrice Works | Smart Price Redirection</title>
+
+<meta name="description" content="Understand how TruePrice helps users reach trusted shopping platforms quickly to find the best available prices without visiting multiple websites.">
+<meta name="author" content="Piyush Ahuja">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A1A3A">
+
+<link rel="canonical" href="https://trueprice.site/blog/how-trueprice-works.html">
+<link rel="icon" href="../favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="How TruePrice Works | Smart Price Redirection">
+<meta property="og:description" content="Understand how TruePrice helps users reach trusted shopping platforms quickly to find the best available prices without visiting multiple websites.">
+<meta property="og:url" content="https://trueprice.site/blog/how-trueprice-works.html">
+<meta property="og:image" content="https://trueprice.site/imgweb/true2.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How TruePrice Works | Smart Price Redirection">
+<meta name="twitter:description" content="Understand how TruePrice helps users reach trusted shopping platforms quickly to find the best available prices without visiting multiple websites.">
+<meta name="twitter:image" content="https://trueprice.site/imgweb/true2.png">
+
+
+<!-- Same dark/light engine -->
+<script src="../script.js" defer></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial, sans-serif}
+
+/* ===== HEADER ===== */
+header{
+    background:#0A1A3A;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.brand img{width:13rem}
+nav ul{
+    display:flex;
+    gap:1.3rem;
+    padding:1rem 0;
+    margin-right:.3rem;
+}
+nav ul li{list-style:none;font-size:.8rem}
+nav ul li a{
+    color:antiquewhite;
+    text-decoration:none;
+}
+nav ul li a:hover{
+    text-decoration:underline;
+    box-shadow:5px 5px 20px red;
+}
+
+/* ===== THEME SUPPORT ===== */
+#mainBox.dark{
+    background:#000;
+    color:#fff;
+}
+#mainBox.light{
+    background:whitesmoke;
+    color:#000;
+}
+
+/* ===== PREMIUM BLOG CARD ===== */
+.blog-wrapper{
+    padding:3rem 1.2rem;
+}
+
+.blog-card{
+    max-width:85rem;
+    margin:0 auto;
+    padding:2.8rem 2.2rem;
+    border-radius:18px;
+    line-height:1.9;
+    box-shadow:0 0 40px rgba(0,0,0,0.25);
+    background:#111;
+}
+
+/* light card */
+#mainBox.light .blog-card{
+    background:#fff;
+}
+
+/* headings */
+.blog-card h1{
+    text-align:center;
+    font-size:1.8rem;
+    margin-bottom:2rem;
+    color:rgb(95,105,164);
+}
+
+.blog-card h2{
+    margin-top:2.2rem;
+    margin-bottom:.8rem;
+    font-size:1.45rem;
+    color:rgb(95,105,164);
+}
+
+/* dark headings */
+#mainBox.dark .blog-card h1,
+#mainBox.dark .blog-card h2{
+    color:#bdb7ff;
+}
+
+.blog-card p{
+    margin-bottom:1.2rem;
+    font-size:1.08rem;
+}
+
+/* image */
+.blog-card img{
+    width:85%;
+    max-width:560px;
+    display:block;
+    margin:2.4rem auto;
+    border-radius:16px;
+    box-shadow:0 0 30px rgba(0,0,0,0.35);
+}
+
+/* 📸 Instagram floating button */
+.insta-float{
+    position: fixed;
+    left: 1rem;
+    bottom: .8rem;
+    z-index: 20;
+}
+
+.insta-float a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #E1306C; /* Instagram brand */
+    box-shadow: 0 0 12px rgba(0,0,0,0.35);
+    transition: 0.25s ease;
+}
+
+.insta-float a:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 18px blueviolet;
+}
+
+.insta-float svg{
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+.insta-tip{
+  position: absolute;
+  left: 58px;
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: 0.25s ease;
+  pointer-events: none;
+}
+
+.insta-float a:hover .insta-tip{
+  opacity: 1;
+  transform: translateX(0);
+}
+/* insta css over here. */
+
+/* responsive */
+@media (min-width:768px){
+    .brand img{width:30rem}
+    nav ul{gap:2rem;margin-right:.8rem}
+    nav ul li{font-size:1.2rem}
+    .blog-card h1{
+        font-size: 2.6rem; /* for main heading size for laptop */
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <div class="brand">
+        <img src="../imgweb/true2.png" alt="trueprice">
+    </div>
+    <ul>
+        <li><a href="../index.html">home</a></li>
+        <li><a href="../about.html">about</a></li>
+        <li><a href="../contact.html">contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+<div id="mainBox">
+
+<div class="blog-wrapper">
+<div class="blog-card">
+
+<h1>✦ How TruePrice Works?</h1>
+
+<p>
+TruePrice is created with a simple but powerful purpose — helping users reach the best available prices on trusted shopping platforms without the need to manually browse multiple websites and apps. Instead of functioning like a shopping store, TruePrice acts as a smart guide that redirects users quickly to relevant product listings.
+</p>
+
+<img src="../imgweb/how trueprice works.png" alt="TruePrice Working System">
+
+<h2>1. A Central Search Starting Point</h2>
+<p>
+TruePrice becomes the single starting point for product searches. Users do not need to open different shopping apps and type the same product repeatedly. One search here leads users toward relevant product pages across platforms.
+</p>
+
+<h2>2. Smart Redirection to Trusted Platforms</h2>
+<p>
+TruePrice does not sell products directly. It redirects users to well-known shopping platforms where sellers maintain their prices. This ensures users always see the most up-to-date prices at the time of purchase.
+</p>
+
+<h2>3. Eliminating Repeated Effort</h2>
+<p>
+Switching between apps, typing the same product name again and again, and manually comparing prices is time-consuming. TruePrice removes this repetition and reduces the effort required.
+</p>
+
+<h2>4. Fast, Clean and Lightweight Experience</h2>
+<p>
+The platform is optimized to load quickly and work smoothly across both mobile and desktop devices.
+</p>
+
+<h2>5. Simple and Distraction-Free Interface</h2>
+<p>
+The design focuses only on what matters — helping users reach better prices without confusion or unnecessary complexity.
+</p>
+
+<h2>6. Helping Users Shop Smarter</h2>
+<p>
+By reducing the steps needed to reach trusted platforms, TruePrice helps users make better buying decisions faster.
+</p>
+
+<h2>7. Future Ready for Advanced Comparison</h2>
+<p>
+TruePrice is being prepared for deeper price comparison capabilities in the future as the platform grows with user support.
+</p>
+
+<p>
+TruePrice is not another shopping website. It is a smart guide that helps users reach the right place faster and shop more confidently.
+</p>
+
+</div>
+</div>
+
+</div>
+</main>
+
+<!-- insta -->
+<div class="insta-float">
+  <a href="https://instagram.com/truepriceofficial" target="_blank" aria-label="Instagram">
+    <span class="insta-tip">Follow the TruePrice journey on Instagram</span>
+    <svg viewBox="0 0 24 24">
+      <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 2a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+    </svg>
+  </a>
+</div>
+<!-- insta code over here. -->
+
+</body>
+</html>
