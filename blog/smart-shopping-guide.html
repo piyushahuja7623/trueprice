@@ -137,6 +137,57 @@ nav ul li a:hover{
 #mainBox.dark .blog-summary{
     background:rgba(189,183,255,0.08);
 }
+/* RELATED GUIDES – FOOTER STYLE */
+.related-guides{
+    max-width:85rem;
+    margin:0 auto;        /* center */
+    padding:1.8rem 2rem;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+#mainBox.light .related-guides{
+    border-top:1px solid rgba(0,0,0,0.08);
+}
+
+.related-guides h3{
+    font-size:1.1rem;
+    margin-bottom:1rem;
+    color:#bdb7ff;
+}
+
+#mainBox.light .related-guides h3{
+    color:rgb(95,105,164);
+}
+
+/* link row */
+.related-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.2rem;
+}
+
+/* links */
+.related-links a{
+    text-decoration:none;
+    font-size:0.95rem;
+    opacity:.85;
+    transition:0.2s ease;
+}
+
+.related-links a:hover{
+    opacity:1;
+    text-decoration:underline;
+}
+/* link colors */
+#mainBox.dark .related-links a{
+    color:#c9c6ff;
+}
+
+#mainBox.light .related-links a{
+    color:#3c4da9;
+}
+
+/* related guide block css over here. */
 
 
 @media (min-width:768px){
@@ -217,11 +268,21 @@ As the platform grows with user support, more advanced comparison capabilities a
 Smart shopping is not only about finding the lowest price — it is about making informed, confident purchasing decisions. With better comparison habits and the help of platforms like TruePrice, users can reduce search time, identify genuine deals faster, and shop more efficiently across trusted online stores.
 </div>
 
-
 </div>
+
+<!-- related code -->
+<div class="related-guides">
+    <h3>Related Guides</h3>
+
+    <div class="related-links">
+        <a href="how-trueprice-works.html">How TruePrice Works</a>
+        <a href="check-product-price-history.html">How to Check Real Product Price History</a>
+    </div>
+</div>
+<!-- related over here. -->
+
 </div>
 </main>
 
 </body>
-
 </html>
