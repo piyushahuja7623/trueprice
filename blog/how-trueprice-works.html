@@ -86,7 +86,7 @@ nav ul li a:hover{
 
 /* ===== PREMIUM BLOG CARD ===== */
 .blog-wrapper{
-    padding:3rem 1.2rem;
+    padding:3rem 1.2rem 1rem 1.2rem;   /* bottom padding kam */
 }
 
 .blog-card{
@@ -192,6 +192,59 @@ nav ul li a:hover{
 }
 /* insta css over here. */
 
+/* RELATED GUIDES – FOOTER STYLE */
+.related-guides{
+    max-width:85rem;
+    margin:0 auto;        /* center */
+    padding:1.8rem 2rem;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+#mainBox.light .related-guides{
+    border-top:1px solid rgba(0,0,0,0.08);
+}
+
+.related-guides h3{
+    font-size:1.1rem;
+    margin-bottom:1rem;
+    color:#bdb7ff;
+}
+
+#mainBox.light .related-guides h3{
+    color:rgb(95,105,164);
+}
+
+/* link row */
+.related-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.2rem;
+}
+
+/* links */
+.related-links a{
+    text-decoration:none;
+    font-size:0.95rem;
+    opacity:.85;
+    transition:0.2s ease;
+}
+
+.related-links a:hover{
+    opacity:1;
+    text-decoration:underline;
+}
+/* link colors */
+#mainBox.dark .related-links a{
+    color:#c9c6ff;
+}
+
+#mainBox.light .related-links a{
+    color:#3c4da9;
+}
+
+/* related guide block css over here. */
+
+
 /* responsive */
 @media (min-width:768px){
     .brand img{width:30rem}
@@ -275,6 +328,18 @@ TruePrice is not another shopping website. It is a smart guide that helps users 
 </div>
 </div>
 
+<!-- related code -->
+<div class="related-guides">
+    <h3>Related Guides</h3>
+
+    <div class="related-links">
+        <a href="smart-shopping-guide.html">Smart Shopping Guide</a>
+        <a href="check-product-price-history.html">How to Check Real Product Price History</a>
+    </div>
+</div>
+
+<!-- related over here. -->
+
 </div>
 </main>
 
@@ -290,5 +355,4 @@ TruePrice is not another shopping website. It is a smart guide that helps users 
 <!-- insta code over here. -->
 
 </body>
-
 </html>
