@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fashion Deals & Online Shopping | TruePrice</title>
+
+<meta name="description" content="Explore the best fashion deals from Myntra, Amazon, and Flipkart. Compare clothing, shoes, and accessories easily with TruePrice and shop smarter.">
+
+<meta name="keywords" content="fashion deals India, online clothing sale, Myntra deals, Amazon fashion, Flipkart fashion, best clothing offers">
+
+<meta name="author" content="Piyush Ahuja">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A1A3A">
+
+<link rel="canonical" href="https://www.trueprice.site/category/fashion.html">
+<link rel="icon" href="../favicon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fashion Deals & Online Shopping | TruePrice">
+<meta property="og:description" content="Find top fashion deals from trusted platforms like Myntra, Amazon, and Flipkart in one place.">
+<meta property="og:url" content="https://www.trueprice.site/category/fashion.html">
+<meta property="og:image" content="https://www.trueprice.site/imgweb/true2.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fashion Deals & Online Shopping | TruePrice">
+<meta name="twitter:description" content="Compare fashion deals across platforms and shop smarter with TruePrice.">
+<meta name="twitter:image" content="https://www.trueprice.site/imgweb/true2.png">
+
+<!-- theme script (same as index) -->
+<script src="../script.js" defer></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23NHWZS59D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23NHWZS59D');
+</script>
+
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        
+        body{
+            font-family: Arial, sans-serif; 
+        }
+/* ===== HEADER (SAME AS INDEX) ===== */
+header{
+    background-color:#0A1A3A;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand img{
+    width:13rem;
+}
+
+nav ul{
+    display:flex;
+    gap:1.3rem;
+    padding:1rem 0;
+    margin-right:.3rem;
+}
+
+nav ul li{
+    list-style:none;
+    font-size:.8rem;
+}
+
+nav ul li a{
+    color:antiquewhite;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    text-decoration:underline;
+    box-shadow: 5px 5px 20px red;
+}
+main{
+    /* padding-top:1px;   🔥 FIXES top white gap */
+}
+/* css for card */
+/* ===== WRAPPER ===== */
+.category-wrapper{
+    max-width:1050px;
+    margin:.3rem auto;
+    padding:2rem 2rem;
+    border-radius:22px;
+
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(135deg,#eef1ff,#f8f9ff);
+}
+/* DARK */
+#mainBox.dark .category-wrapper{
+    background: linear-gradient(135deg,#0a0a12,#000);
+}
+/* glow effect */
+.category-wrapper::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: radial-gradient(circle at top, rgba(138,43,226,0.15), transparent 60%);
+    pointer-events:none;
+}
+#mainBox.light .category-wrapper{
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.08);
+}
+
+/* heading */
+.category-wrapper h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#mainBox.light .category-wrapper h1{
+    color:#2d3a8c;
+}
+
+/* dark heading */
+#mainBox.dark .category-wrapper h1{
+    color: #bdb7ff;
+}
+
+.subtitle{
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color:#555;
+}
+
+/* dark subtitle */
+#mainBox.dark .subtitle{
+    color: #bbb;
+}
+
+/* ===== CARDS ===== */
+.platform-card{
+    padding:2rem;
+    margin-bottom:2rem;
+    border-radius:20px;
+    text-align:center;
+
+    background: linear-gradient(145deg,#1a1a1a,#111);
+    border:1px solid rgba(255,255,255,0.05);
+
+    transition:0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow overlay */
+.platform-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: radial-gradient(circle at top, rgba(138,43,226,0.15), transparent 70%);
+    pointer-events:none;
+}
+/* Brand top borders */
+
+/* NEW CLEAN SYSTEM ✅ */
+.amazon-card{
+    border-top: 4px solid #ff9900;
+}
+
+.myntra-card{
+    border-top: 4px solid #ff3f6c;
+}
+
+.flipkart-card{
+    border-top: 4px solid #2874f0;
+}
+#mainBox.light .amazon-card{
+    box-shadow: inset 0 2px 0 rgba(255,153,0,0.4);
+}
+
+#mainBox.light .myntra-card{
+    box-shadow: inset 0 2px 0 rgba(255,63,108,0.4);
+}
+
+#mainBox.light .flipkart-card{
+    box-shadow: inset 0 2px 0 rgba(40,116,240,0.4);
+}
+
+
+#mainBox.light .platform-card{
+    background:#fff;
+    border: 1px solid #e5e5e5 !important;
+}
+
+.platform-card:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:0 25px 60px rgba(120,130,255,0.35);
+}
+/* dark mode card */
+#mainBox.dark .platform-card{
+    background: #1f1f1f;
+}
+
+/* title */
+.platform-card h3{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    font-size:1.2rem;
+}
+
+/* dark */
+#mainBox.dark .platform-card h3{
+    color: #bdb7ff;
+}
+
+/* text */
+.platform-card p{
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+#mainBox.dark .platform-card p{
+    color: #ccc;
+}
+/* THEME BACKGROUND FIX */
+#mainBox.dark{
+    background: linear-gradient(
+        135deg,
+        #0a0a12 0%,
+        #050509 40%,
+        #0f0f1f 100%
+    );
+    color:#fff;
+    min-height:100vh;
+    padding: 2rem 0;
+}
+#mainBox.light{
+    background: linear-gradient(
+        135deg,
+        #f5f7ff 0%,
+        #eef1ff 40%,
+        #ffffff 100%
+    );
+    color:#000;
+    min-height:100vh;
+    padding: 2rem 0;
+}
+#mainBox.dark::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background: radial-gradient(circle at 20% 10%, rgba(138,43,226,0.12), transparent 60%);
+    pointer-events:none;
+}
+
+#mainBox.light::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background: radial-gradient(circle at top, rgba(120,130,255,0.08), transparent 60%);
+    pointer-events:none;
+}
+
+/* button */
+.platform-card a{
+    display:inline-block;
+    padding:0.7rem 1.6rem;
+
+    border-radius:999px;
+    background: linear-gradient(135deg, #6a75ff, #8f9bff);
+    color:#fff;
+
+    font-weight:600;
+    letter-spacing:0.3px;
+    text-decoration:none;
+    box-shadow:0 6px 20px rgba(106,117,255,0.4);
+    transition:0.25s ease;
+}
+
+.platform-card a:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 25px rgba(143,155,255,0.7);
+}
+/* ===== INFO BOX ===== */
+.info-box{
+    margin-top: 2rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+    background: rgba(95,105,164,0.08);
+    border-left: 5px solid rgb(95,105,164);
+    font-size: 0.95rem;
+}
+
+#mainBox.dark .info-box{
+    background: rgba(189,183,255,0.08);
+}
+.top-info{
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+.trust-line{
+    font-size:0.9rem;
+    opacity:0.8;
+    margin-bottom:0.6rem;
+}
+
+.subtitle{
+    font-size:1rem;
+    margin-bottom:0.8rem;
+}
+
+.mini-benefit{
+    font-size:0.85rem;
+    opacity:0.7;
+}
+
+/* dark */
+#mainBox.dark .mini-benefit{
+    color:#aaa;
+}
+
+/* tag css */
+.tag{
+    display:inline-block;
+    margin: 0.4rem 0 0.8rem 0;
+    font-size:0.7rem;
+    padding:4px 10px;
+    border-radius:999px;
+
+    background:#eef1ff;   /* soft bg */
+    color:#5f69a4;
+
+    font-weight:500;
+    border:1px solid #d6dbff;
+}
+
+#mainBox.dark .tag{
+    background:rgba(189,183,255,0.12);
+    color:#bdb7ff;
+}
+/* 📸 Instagram floating button */
+.insta-float{
+    position: fixed;
+    left: 1rem;
+    bottom: .8rem;
+    z-index: 20;
+}
+
+.insta-float a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: #E1306C; /* Instagram brand */
+    box-shadow: 0 0 12px rgba(0,0,0,0.35);
+    transition: 0.25s ease;
+}
+
+.insta-float a:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 18px blueviolet;
+}
+
+.insta-float svg{
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+.insta-tip{
+  position: absolute;
+  left: 58px;
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: 0.25s ease;
+  pointer-events: none;
+}
+
+.insta-float a:hover .insta-tip{
+  opacity: 1;
+  transform: translateX(0);
+}
+/* insta css over here. */
+.logo{
+    width: 55px;
+    height: auto;
+    object-fit: contain;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+/* sab logos white in dark */
+#mainBox.dark .logo{
+    filter: brightness(0) invert(1);
+}
+
+/* ❌ flipkart ko original rakho */
+#mainBox.dark .flipkart-logo{
+    filter: none !important;
+}
+.platform-card{
+    opacity:0;
+    transform:translateY(20px);
+    animation:fadeUp 0.6s ease forwards;
+}
+
+.platform-card:nth-child(2){ animation-delay:0.1s; }
+.platform-card:nth-child(3){ animation-delay:0.2s; }
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* 📱 Mobile polish */
+@media (max-width: 600px){
+    .category-wrapper{
+    margin:0rem auto;
+    }
+}
+
+        /* ===== RESPONSIVE ===== */
+@media (min-width:768px){
+    .brand img{ width:30rem; }
+    nav ul{ gap:2rem; margin-right:.8rem; }
+    nav ul li{ font-size:1.2rem; }
+    .category-wrapper h1{font-size: 2.6rem;}
+    .logo{width: 70px;}
+}
+
+</style>
+</head>
+<body>
+   
+    <header>
+<nav>
+    <div class="brand">
+        <img src="../imgweb/true2.png" alt="trueprice">
+    </div>
+    <ul>
+        <li><a href="../index.html">home</a></li>
+        <li><a href="../about.html">about</a></li>
+        <li><a href="../contact.html">contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<!-- MAIN CONTENT START -->
+<main>
+<div id="mainBox">
+
+<section class="category-wrapper">
+
+<h1>👕Shop Fashion Smarter with TruePrice</h1>
+<div class="top-info">
+  <p class="trust-line">
+    ✔ Compare prices faster &nbsp; • &nbsp;
+    ✔ Avoid fake discounts &nbsp; • &nbsp;
+    ✔ Shop trusted platforms
+  </p>
+
+  <!-- <p class="subtitle">
+    Find the best fashion deals across Myntra, Amazon & Flipkart —  
+    no fake discounts, no confusion. Just real savings in seconds.
+  </p> -->
+
+  <p class="mini-benefit">
+    ⚡ Saves time &nbsp; • &nbsp; 💰 Avoid overpaying &nbsp; • &nbsp; 🔍 Compare instantly
+  </p>
+</div>
+<!-- CARD 1 -->
+<div class="platform-card amazon-card">
+    <h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="logo">
+        Amazon Fashion 🔥
+    </h3>
+    <span class="tag">Popular</span>
+    <p>
+        Up to 60% OFF on trending styles. Explore branded clothing, shoes & accessories at better prices.
+    </p>
+    <a href="https://amzn.to/4ttYeZG" target="_blank" rel="noopener noreferrer">View Deals</a>
+</div>
+
+<!-- CARD 2 -->
+<div class="platform-card myntra-card">
+    <h3>
+        <img src="https://cdn.worldvectorlogo.com/logos/myntra-1.svg" class="logo">
+        Myntra Sale ⚡
+    </h3>
+    <span class="tag">Best Value</span>
+    <p>
+        Flat 50–70% OFF on fashion. Discover latest trends, top brands & exclusive sale offers in one place.
+    </p>
+    <a href="https://myntr.clnk.in/Ai2C" target="_blank" rel="noopener noreferrer">Shop Now</a>
+</div>
+
+<!-- CARD 3 -->
+<div class="platform-card flipkart-card">
+    <h3>
+       <img src="https://1000logos.net/wp-content/uploads/2021/02/Flipkart-logo.png" class="logo flipkart-logo">
+        Flipkart Fashion 💥
+    </h3>
+    <span class="tag">Trending</span>
+    <p>
+        Budget-friendly fashion deals on clothing, footwear & accessories. Perfect for smart shoppers.
+    </p>
+    <a href="https://fkrt.clnk.in/Ai2J" target="_blank" rel="noopener noreferrer">Check Offers</a>
+</div>
+
+<div class="benefit-box">
+<h3>Why use TruePrice for Fashion?</h3>
+
+<ul>
+<li>✔ Save time by avoiding multiple apps</li>
+<li>✔ Quickly compare fashion deals</li>
+<li>✔ Avoid fake discounts & confusion</li>
+<li>✔ Shop confidently from trusted platforms</li>
+</ul>
+
+</div>
+
+<!-- TRUST / INFO BLOCK -->
+<div class="info-box">
+    <p>
+    💡 Tip: Compare at least 2 platforms before buying to get the best price.
+    </p>
+</div>
+
+</section>
+
+</div>
+</main>
+<!-- MAIN CONTENT END -->
+<!-- insta -->
+<div class="insta-float">
+  <a href="https://instagram.com/truepriceofficial" target="_blank" aria-label="Instagram">
+    <span class="insta-tip">Follow the TruePrice journey on Instagram</span>
+    <svg viewBox="0 0 24 24">
+      <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 2a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
+    </svg>
+  </a>
+</div>
+<!-- insta code over here. -->
+ 
+</body>
+</html>
