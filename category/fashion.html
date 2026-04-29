@@ -434,6 +434,61 @@ main{
 .platform-card:nth-child(2){ animation-delay:0.1s; }
 .platform-card:nth-child(3){ animation-delay:0.2s; }
 
+/* ===== BENEFIT BOX (FASHION FIX) ===== */
+.benefit-box{
+    margin-top:2.5rem;
+    padding:1.5rem;
+    border-radius:14px;
+    background: linear-gradient(
+        135deg,
+        rgba(95,105,164,0.08),
+        rgba(120,130,255,0.05)
+    );
+    border-left:5px solid rgb(95,105,164);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+    text-align:left;
+    position:relative; 
+    overflow:hidden;
+}
+
+/* dark mode */
+#mainBox.dark .benefit-box{
+    background: linear-gradient(
+        135deg,
+        rgba(189,183,255,0.08),
+        rgba(120,130,255,0.05)
+    );
+
+    border-left:5px solid #bdb7ff;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* text spacing */
+.benefit-box ul{
+    margin-top:.7rem;
+    padding-left:1rem;
+}
+
+.benefit-box li{
+    margin-bottom:.4rem;
+}
+.benefit-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(120,130,255,0.15),
+        transparent 60%
+    );
+    pointer-events:none;
+}
+
 @keyframes fadeUp{
     to{
         opacity:1;
